@@ -1,0 +1,18 @@
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+
+.axisSteelBlue text {
+  fill: #23815a; /* average of steelblue + green */
+}
+
+.axisRed text {
+  fill: red;
+}
+
+.axisLabel text {
+  font-family: sans-serif;
+  font-size: 10px;
+}

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script>
+      function death() {
+        d3.csv("Mortality.csv").then(function (dataset) {
+          function layout() {
+            let deathArray = [];
+            let deathCause = [];
+            let ageType = ["Old Adult", "Adult", "Yearling", "Pup"];
+            for (let i = 0; i < dataset.length; i++) {
+              if (deathCause.includes(dataset[i].Cause) === false) {
+                deathArray.push([
+                  dataset[i].Cause,
+                  [
+                    [0, "Old Adult"],
+                    [0, "Adult"],
+                    [0, "Yearling"],
+                    [0, "Pup"],
+                  ],
+                ]);
+                deathCause.push(dataset[i].Cause);
+              }
+              if (dataset[i].Age === "Old Adult") {
+                let deathReason = dataset[i].Cause;
+                for (let j = 0; j < deathArray.length; j++) {
+                  if (deathArray[j][0] === deathReason) {
+                    deathArray[j][1][0][0] += 1;
+                  }
+                }
+              }
+              if (dataset[i].Age === "Adult") {
+                let deathReason = dataset[i].Cause;
+                for (let j = 0; j < deathArray.length; j++) {
+                  if (deathArray[j][0] === deathReason) {
+                    deathArray[j][1][1][0] += 1;
+                  }
+                }
+              }
+              if (dataset[i].Age === "Yearling") {
+                let deathReason = dataset[i].Cause;
+                for (let j = 0; j < deathArray.length; j++) {
+                  if (deathArray[j][0] === deathReason) {
+                    deathArray[j][1][2][0] += 1;
+                  }
+                }
+              }
+              if (dataset[i].Age === "Pup") {
+                let deathReason = dataset[i].Cause;
+                for (let j = 0; j < deathArray.length; j++) {
+                  if (deathArray[j][0] === deathReason) {
+                    deathArray[j][1][3][0] += 1;
+                  }
+                }
+              }
+            }
+            totalArray = [deathArray, deathCause, ageType];
+            return totalArray;
+          }
+          let test = layout();
+          console.log(test);
+          var margin = { top: 20, right: 0, bottom: 35, left: 30 };
+
+          var width = 960 - margin.left - margin.right,
+            height = 500 - margin.top - margin.bottom;
+
+          // creating x,y, and colors
+          var x = d3
+            .scaleBand()
+            .domain(test[1])
+            .range([10, width - 10], 0.02);
+          var y = d3.scaleLinear().domain([0, 30]).range([height, 0]);
+
+          var x1 = d3.scaleBand().domain(test[2]).range([0, x.bandwidth()]);
+
+          var svg = d3
+            .select("body")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr(
+              "transform",
+              "translate(" + margin.left + "," + margin.top + ")"
+            );
+          //axis area
+          var xAxis = d3.axisBottom().scale(x).tickSize(0);
+
+          var yAxis = d3.axisLeft().scale(y);
+          var color = d3
+            .scaleOrdinal()
+            .range(["#ca0020", "#f4a582", "#d5d5d5", "#92c5de"]);
+          var colors = ["#ca0020", "#f4a582", "#d5d5d5", "#92c5de"];
+          //draw rect
+          svg
+            .append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis);
+
+          svg
+            .append("g")
+            .attr("class", "y axis")
+            .style("opacity", "0")
+            .call(yAxis)
+            .append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 6)
+            .attr("dy", ".71em")
+            .style("text-anchor", "end")
+            .style("font-weight", "bold")
+            .text("Value");
+          svg
+            .select(".y")
+            .transition()
+            .duration(500)
+            .delay(1300)
+            .style("opacity", "1");
+
+          var slice = svg
+            .selectAll(".slice")
+            .data(test[0])
+            .enter()
+            .append("g")
+            .attr("class", "g")
+            .attr("transform", function (d) {
+              return "translate(" + x(d[0]) + ",0)";
+            });
+
+          //categorie = x axis
+          // rate  = color/type
+
+          slice
+            .selectAll("rect")
+            .data(function (d) {
+              return d[1];
+            })
+            .enter()
+            .append("rect")
+            .attr("width", x1.bandwidth())
+            .attr("x", function (d) {
+              return x1(d[1]);
+            })
+            .style("fill", function (d) {
+              return color(d[1]);
+            })
+            .attr("y", function (d) {
+              return y(0);
+            })
+            .attr("height", function (d) {
+              return height - y(0);
+            })
+            .on("mouseover", function (d) {
+              d3.select(this).style("fill", d3.rgb(color(d[1])).darker(2));
+            })
+            .on("mouseout", function (d) {
+              d3.select(this).style("fill", color(d[1]));
+            });
+          slice
+            .selectAll("rect")
+            .transition()
+            .delay(function (d) {
+              return Math.random() * 1000;
+            })
+            .duration(1000)
+            .attr("y", function (d) {
+              return y(d[0]);
+            })
+            .attr("height", function (d) {
+              return height - y(d[0]);
+            });
+
+          var legend = svg
+            .selectAll(".legend")
+            .data(test[2])
+            .enter()
+            .append("g")
+            .attr("class", "legend")
+            .attr("transform", function (d, i) {
+              return "translate(0," + i * 20 + ")";
+            })
+            .style("opacity", "0");
+
+          legend
+            .append("rect")
+            .attr("x", width - 18)
+            .attr("width", 18)
+            .attr("height", 18)
+            .style("fill", function (d) {
+              return color(d);
+            });
+
+          legend
+            .append("text")
+            .attr("x", width - 24)
+            .attr("y", 9)
+            .attr("dy", ".35em")
+            .style("text-anchor", "end")
+            .text(function (d) {
+              return d;
+            });
+
+          legend
+            .transition()
+            .duration(500)
+            .delay(function (d, i) {
+              return 1300 + 100 * i;
+            })
+            .style("opacity", "1");
+        });
+      }
+    </script>
+    <title>Yellowstone Wolf</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">Yellowstone Wolves</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="history.html">History</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="allPopulation.html"
+              >Population of All Animals</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutWolves.html">About the Wolves</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="wolfPopulation.html"
+              >Population of Wolves</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mortalityWolf.html"
+              >Mortality of Wolves</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="takeaway.html">Takeaway</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <button type="button" onclick="death()">
+      Click me to display Wolf Mortality
+    </button>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
