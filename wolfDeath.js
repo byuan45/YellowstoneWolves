@@ -63,8 +63,9 @@ function death() {
     // creating x,y, and colors
     var x = d3
       .scaleBand()
+      .paddingInner(0.3)
       .domain(test[1])
-      .range([10, width - 10], 0.02);
+      .range([10, width - 10]);
     var y = d3.scaleLinear().domain([0, 30]).range([height, 0]);
 
     var x1 = d3.scaleBand().domain(test[2]).range([0, x.bandwidth()]);
@@ -149,7 +150,7 @@ function death() {
       })
       .enter()
       .append("rect")
-      .attr("width", x1.bandwidth() - 5)
+      .attr("width", x1.bandwidth())
       .attr("x", function (d) {
         return x1(d[1]);
       })

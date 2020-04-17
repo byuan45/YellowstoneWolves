@@ -94,7 +94,7 @@ function wolfPopulation() {
       var x = d3
         .scaleBand()
         .domain(something[2])
-        .range([10, width - 10], 0.02);
+        .range([10, width - 10]);
       var y = d3.scaleLinear().domain([0, 40]).range([height, 0]);
 
       var colors = ["b33040", "#d25c4d"];
