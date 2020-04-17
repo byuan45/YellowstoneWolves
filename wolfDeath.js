@@ -57,7 +57,7 @@ function death() {
     console.log(test);
     var margin = { top: 20, right: 0, bottom: 35, left: 30 };
 
-    var width = 960 - margin.left - margin.right,
+    var width = 1500 - margin.left - margin.right,
       height = 500 - margin.top - margin.bottom;
 
     // creating x,y, and colors
@@ -110,6 +110,25 @@ function death() {
       .delay(1300)
       .style("opacity", "1");
 
+    svg
+      .append("text")
+      .attr("class", "black")
+      .attr(
+        "transform",
+        "translate(" + 10 + "," + (height - 350) + ")rotate(270)"
+      )
+      .style("font-family", "sans-serif")
+      .style("font-size", "10px")
+      .style("fill", "#23815a")
+      .text("Number of Wolves");
+    svg
+      .append("text")
+      .attr("class", "axisSteelBlue")
+      .attr("transform", "translate(" + 750 + "," + (height + 30) + ")")
+      .style("font-family", "sans-serif")
+      .style("font-size", "10px")
+      .style("fill", "#23815a")
+      .text("Cause Of Death");
     var slice = svg
       .selectAll(".slice")
       .data(test[0])
@@ -130,7 +149,7 @@ function death() {
       })
       .enter()
       .append("rect")
-      .attr("width", x1.bandwidth())
+      .attr("width", x1.bandwidth() - 5)
       .attr("x", function (d) {
         return x1(d[1]);
       })

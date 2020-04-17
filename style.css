@@ -16,3 +16,23 @@
   font-family: sans-serif;
   font-size: 10px;
 }
+
+#elk-blue path {
+  stroke-dasharray: 0;
+  stroke: steelblue;
+}
+
+#wolf-red path {
+  stroke-dasharray: 2;
+  stroke: red;
+}
+
+#elk-blue path {
+  stroke-dasharray: 5;
+  stroke: green;
+}
+
+.tooltip text {
+  font-family: sans-serif;
+  font-size: 12px;
+}

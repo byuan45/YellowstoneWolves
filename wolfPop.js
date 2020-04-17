@@ -34,7 +34,6 @@ function wolfPopulation() {
       .text((d) => d);
 
     d3.select("#year").on("change", function () {
-      console.log(d3.select("#year").property("value"));
       remove(d3.select("#year").property("value"));
     });
 
@@ -110,7 +109,27 @@ function wolfPopulation() {
         .attr("transform", "translate(0," + height + ")")
         .call(xAxis);
       something.splice(2);
-      console.log(something);
+
+      svg
+        .append("text")
+        .attr("class", "black")
+        .attr(
+          "transform",
+          "translate(" + -23 + "," + (height - 250) + ")rotate(270)"
+        )
+        .style("font-family", "sans-serif")
+        .style("font-size", "10px")
+        .style("fill", "#23815a")
+        .text("Number of Wolves");
+
+      svg
+        .append("text")
+        .attr("class", "black")
+        .attr("transform", "translate(" + 500 + "," + (height + 35) + ")")
+        .style("font-family", "sans-serif")
+        .style("font-size", "10px")
+        .style("fill", "#23815a")
+        .text("Pack Name");
       svg
         .selectAll("g.Population")
         .data(something)
@@ -135,23 +154,41 @@ function wolfPopulation() {
         .attr("height", function (d) {
           return y(d[2]) - y(d[2] + d[1]);
         })
-        .attr("width", x.bandwidth() - 10)
-        .on("mouseover", function () {
-          tooltip.style("display", null);
-        })
-        .on("mouseout", function () {
-          tooltip.style("display", "none");
-        })
-        .on("mousemove", function (d) {
-          var xPosition = d3.mouse(this)[0] - 15;
-          var yPosition = d3.mouse(this)[1] - 25;
-          tooltip.attr(
-            "transform",
-            "translate(" + xPosition + "," + yPosition + ")"
-          );
-          tooltip.select("text").text(d[1]);
-        });
+        .attr("width", x.bandwidth() - 10);
+      //   .on("mouseover", function () {
+      //     tooltip.style("display", null);
+      //   })
+      //   .on("mouseout", function () {
+      //     tooltip.style("display", "none");
+      //   })
+      //   .on("mousemove", function (d) {
+      //     var xPosition = d3.mouse(this)[0] - 15;
+      //     var yPosition = d3.mouse(this)[1] - 25;
+      //     tooltip.attr(
+      //       "transform",
+      //       "translate(" + xPosition + "," + yPosition + ")"
+      //     );
+      //     tooltip.select("text").text(d.y);
+      //   });
+      // var tooltip = svg
+      //   .append("g")
+      //   .attr("class", "tooltip")
+      //   .style("display", "none");
 
+      // tooltip
+      //   .append("rect")
+      //   .attr("width", 30)
+      //   .attr("height", 20)
+      //   .attr("fill", "white")
+      //   .style("opacity", 0.5);
+
+      // tooltip
+      //   .append("text")
+      //   .attr("x", 15)
+      //   .attr("dy", "1.2em")
+      //   .style("text-anchor", "middle")
+      //   .attr("font-size", "12px")
+      //   .attr("font-weight", "bold");
       // draw legend
       var legend = svg
         .selectAll(".legend")
@@ -188,26 +225,6 @@ function wolfPopulation() {
         });
 
       //draw tooltip
-
-      var tooltip = svg
-        .append("g")
-        .attr("class", "tooltip")
-        .style("display", "none");
-
-      tooltip
-        .append("rect")
-        .attr("width", 30)
-        .attr("height", 20)
-        .attr("fill", "white")
-        .style("opacity", 0.5);
-
-      tooltip
-        .append("text")
-        .attr("x", 15)
-        .attr("dy", "1.2em")
-        .style("text-anchor", "middle")
-        .attr("font-size", "12px")
-        .attr("font-weight", "bold");
     }
     update(1996);
   });
