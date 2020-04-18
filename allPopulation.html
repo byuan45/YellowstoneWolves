@@ -65,11 +65,37 @@
         </ul>
       </div>
     </nav>
-    <script>
-      setTimeout(function () {
-        population();
-      }, 100);
-    </script>
+    <div class="container">
+      <div class="jumbotron jumbotron-fluid ">
+        <div class="container">
+          <h1 class="display-4">Animal Populations</h1>
+          <p class="lead">
+            This visualization shows how populations of other animals in the
+            ecosystem have been impacted by the introduction of wolves. While
+            the wolves were gone, elk populations boomed, because they are the
+            wolves’ primary prey. One the wolves were introduced again, the elk
+            population decreased again over time. Another one of the wolves’
+            prey is the bison; however, the wolves largely prefer elk, and it
+            took over two years after their introduction for a wolf to kill a
+            bison. The change in population of the bison actually came as a
+            result from the elk changes, not the introduction of wolves. The
+            bison population has steadily increased since 2000, which has come
+            as a result of more forage being available to them, which has
+            happened as a result of the population decrease of the elk. It is
+            apparent that in the last 8 years or so, the populations of the
+            three animals are now balanced and stable, proving the importance of
+            the wolf in the balance of the ecosystem.
+          </p>
+        </div>
+      </div>
+      <div id="chart" align="center"></div>
+
+        <script>
+          setTimeout(function () {
+            population();
+          }, 100);
+        </script>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://d3js.org/d3.v5.min.js"></script>

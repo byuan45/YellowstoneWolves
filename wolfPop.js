@@ -44,11 +44,11 @@ function wolfPopulation() {
     function update(input) {
       var margin = { top: 20, right: 160, bottom: 35, left: 30 };
 
-      var width = 1300 - margin.left - margin.right,
+      var width = 1200 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
 
       var svg = d3
-        .select("body")
+        .select("#chart")
         .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)

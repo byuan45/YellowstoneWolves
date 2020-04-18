@@ -57,7 +57,7 @@ function death() {
     console.log(test);
     var margin = { top: 20, right: 0, bottom: 35, left: 30 };
 
-    var width = 1500 - margin.left - margin.right,
+    var width = 1100 - margin.left - margin.right,
       height = 500 - margin.top - margin.bottom;
 
     // creating x,y, and colors
@@ -71,7 +71,7 @@ function death() {
     var x1 = d3.scaleBand().domain(test[2]).range([0, x.bandwidth()]);
 
     var svg = d3
-      .select("body")
+      .select("#chart")
       .append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)

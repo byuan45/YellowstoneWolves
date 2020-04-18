@@ -17,11 +17,7 @@
       crossorigin="anonymous"
     />
     <script src="wolfDeath.js"></script>
-    <script>
-      setTimeout(function () {
-        death();
-      }, 100);
-    </script>
+
     <title>Yellowstone Wolf</title>
   </head>
   <body>
@@ -77,7 +73,33 @@
         </ul>
       </div>
     </nav>
+    <div class="container">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Mortality of Wolves</h1>
+          <p class="lead">
+            Even though the wolves are top predators, they can die for multiple
+            reasons. “Intraspecific” is the categorization of a death resulting
+            from competition within the wolf species. This is generally the most
+            common mortality cause, but there have been other reasons in the
+            recent history of the wolves in Yellowstone. Wolves can die due to
+            competition with other species as well, or just of natural causes.
+            Additionally, there was an outbreak of a viral disease in 2005,
+            2008, and 2009, and sarcoptic mange hit the wolves in epidemic
+            proportions in 2009, which caused a large reduction in the
+            population. The below graph shows the breakdowns of these mortality
+            causes at different times.
+          </p>
+        </div>
+      </div>
+      <div id="chart" align="center"></div>
+    </div>
 
+    <script>
+      setTimeout(function () {
+        death();
+      }, 100);
+    </script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"

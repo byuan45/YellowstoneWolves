@@ -73,14 +73,34 @@
         </ul>
       </div>
     </nav>
+    <div class="container">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Wolf Populations</h1>
+          <p class="lead">
+            Wolves are both highly social and territorial. They formed their
+            packs immediately, and the packs are essential for hunting and
+            overall survival. The packs are often aggressive towards each other
+            when they must protect each other and defend territory or an animal
+            carcass. Because of this aggression, wolves often die during
+            interactions with those outside of their own pack. This can cause
+            fluctuations in pack sizes, even to the point of a pack dying out or
+            a new one beginning. These changes can be seen in the below graph,
+            which shows the populations of adults and pups for each pack during
+            a chosen year.
+          </p>
+        </div>
+      </div>
+      <div id="main"></div>
+      Select year:
+      <select id="year"></select>
+      <div id="chart" align="center"></div>
+    </div>
     <script>
       setTimeout(function () {
         wolfPopulation();
       }, 100);
     </script>
-    <div id="main"></div>
-    Select year:
-    <select id="year"></select>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
