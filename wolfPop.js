@@ -44,7 +44,7 @@ function wolfPopulation() {
     function update(input) {
       var margin = { top: 20, right: 160, bottom: 35, left: 30 };
 
-      var width = 1300 - margin.left - margin.right,
+      var width = 1275 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
 
       var svg = d3
@@ -156,41 +156,7 @@ function wolfPopulation() {
           return y(d[2]) - y(d[2] + d[1]);
         })
         .attr("width", x.bandwidth() - 10);
-      //   .on("mouseover", function () {
-      //     tooltip.style("display", null);
-      //   })
-      //   .on("mouseout", function () {
-      //     tooltip.style("display", "none");
-      //   })
-      //   .on("mousemove", function (d) {
-      //     var xPosition = d3.mouse(this)[0] - 15;
-      //     var yPosition = d3.mouse(this)[1] - 25;
-      //     tooltip.attr(
-      //       "transform",
-      //       "translate(" + xPosition + "," + yPosition + ")"
-      //     );
-      //     tooltip.select("text").text(d.y);
-      //   });
-      // var tooltip = svg
-      //   .append("g")
-      //   .attr("class", "tooltip")
-      //   .style("display", "none");
 
-      // tooltip
-      //   .append("rect")
-      //   .attr("width", 30)
-      //   .attr("height", 20)
-      //   .attr("fill", "white")
-      //   .style("opacity", 0.5);
-
-      // tooltip
-      //   .append("text")
-      //   .attr("x", 15)
-      //   .attr("dy", "1.2em")
-      //   .style("text-anchor", "middle")
-      //   .attr("font-size", "12px")
-      //   .attr("font-weight", "bold");
-      // draw legend
       var legend = svg
         .selectAll(".legend")
         .data(colors)
@@ -203,7 +169,7 @@ function wolfPopulation() {
 
       legend
         .append("rect")
-        .attr("x", width - 18)
+        .attr("x", width - 120)
         .attr("width", 18)
         .attr("height", 18)
         .style("fill", function (d, i) {
@@ -212,7 +178,7 @@ function wolfPopulation() {
 
       legend
         .append("text")
-        .attr("x", width + 5)
+        .attr("x", width - 100)
         .attr("y", 9)
         .attr("dy", ".35em")
         .style("text-anchor", "start")
