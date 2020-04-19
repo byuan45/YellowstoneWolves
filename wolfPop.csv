@@ -1,0 +1,459 @@
+Year,Pack,Type,Population
+2019,8 Mile,A,9
+2019,8 Mile,P,8
+2019,Phantom Lake,A,4
+2019,Phantom Lake,P,7
+2019,Junction Butte,A,10
+2019,Junction Butte,P,8
+2019,Lamar Canyon,A,3
+2019,Lamar Canyon,P,4
+2019,Other,A,2
+2019,Bechler,A,2
+2019,Bechler,P,2
+2019,Cougar Creek,A,6
+2019,Mollie's,A,6
+2019,Mollie's,P,4
+2019,Wapiti Lake,A,10
+2019,Wapiti Lake,P,9
+2018,8 Mile,A,8
+2018,8 Mile,P,4
+2018,1005F group,A,3
+2018,Junction Butte,A,8
+2018,Junction Butte,P,3
+2018,Lamar Canyon,A,2
+2018,Lamar Canyon,P,3
+2018,Crevice Lake,A,5
+2018,Crevice Lake,P,2
+2018,Other,A,1
+2018,Bechler,A,4
+2018,Cougar Creek,A,7
+2018,Cougar Creek,P,3
+2018,Mollie's,A,4
+2018,Mollie's,P,3
+2018,1118F group,A,1
+2018,Wapiti,A,13
+2018,Wapiti,P,6
+2017,8 Mile,A,9
+2017,8 Mile,P,4
+2017,Junction Butte,A,8
+2017,Lamar Canyon,A,3
+2017,1108M group,A,5
+2017,Prospect Peak,A,3
+2017,Prospect Peak,P,1
+2017,963F group,A,2
+2017,Bechler,A,8
+2017,Cougar Creek,A,6
+2017,Cougar Creek,P,1
+2017,Mollie's,A,14
+2017,Snake River,A,9
+2017,Snake River,P,3
+2017,Wapiti,A,9
+2017,Wapiti,P,12
+2016,8 Mile,A,8
+2016,8 Mile,P,10
+2016,Junction Butte,A,3
+2016,Junction Butte,P,4
+2016,Lamar Canyon,A,5
+2016,Prospect Peak,A,9
+2016,Prospect Peak,P,2
+2016,Bechler,A,5
+2016,Bechler,P,4
+2016,Canyon,A,5
+2016,Canyon,P,1
+2016,Cinnabar,A,3
+2016,Cougar Creek,A,6
+2016,Cougar Creek,P,2
+2016,Mollie's,A,14
+2016,Mollie's,P,4
+2016,Snake River,A,9
+2016,Snake River,P,5
+2016,Wapiti Lake,A,5
+2016,Wapiti Lake,P,4
+2015,8 Mile,A,8
+2015,8 Mile,P,5
+2015,Junction Butte,A,6
+2015,Junction Butte,P,8
+2015,Prospect Peak,A,8
+2015,Prospect Peak,P,5
+2015,Lamar Canyon,A,6
+2015,Lamar Canyon,P,3
+2015,Other,A,1
+2015,Wapiti Lake,A,2
+2015,Wapiti Lake,P,4
+2015,Bechler,A,6
+2015,Canyon,A,4
+2015,Canyon,P,2
+2015,Cougar Creek,A,5
+2015,Cougar Creek,P,2
+2015,Mollie's,A,10
+2015,Mollie's,P,6
+2015,Snake River,A,7
+2013,8 Mile,A,9
+2013,8 Mile,P,9
+2013,Blacktail,A,3
+2013,Junction Butte,A,5
+2013,Junction Butte,P,4
+2013,Lamar Canyon,A,2
+2013,755M/889F group,A,3
+2013,Bechler,A,7
+2013,Bechler,P,4
+2013,Canyon,A,5
+2013,Canyon,P,3
+2013,Cougar Creek,A,7
+2013,Cougar Creek,P,6
+2013,Mollie's,A,2
+2013,Mollie's,P,5
+2013,Snake River,A,5
+2013,Snake River,P,4
+2013,Yellowstone Delta,A,7
+2013,Yellowstone Delta,P,6
+2012,8 Mile,A,7
+2012,8 Mile,P,3
+2012,Blacktail,A,4
+2012,Junction Butte,A,7
+2012,Junction Butte,P,2
+2012,Lamar Canyon,A,7
+2012,Lamar Canyon,P,4
+2012,Bechler,A,8
+2012,Bechler,P,2
+2012,Canyon,A,6
+2012,Canyon,P,2
+2012,Cougar Creek,A,6
+2012,Cougar Creek,P,5
+2012,Mollie's,A,5
+2012,Snake River,A,2
+2012,Snake River,P,2
+2012,Yellowstone Delta,A,11
+2011,8 Mile,A,5
+2011,8 Mile,P,2
+2011,Agate,A,3
+2011,Agate,P,0
+2011,Blacktail,A,10
+2011,Blacktail,P,5
+2011,Lamar Canyon,A,6
+2011,Lamar Canyon,P,5
+2011,Other,A,3
+2011,Bechler,A,2
+2011,Bechler,P,2
+2011,Canyon,A,5
+2011,Canyon,P,2
+2011,Cougar Creek,A,4
+2011,Cougar Creek,P,3
+2011,Mary Mountain,A,5
+2011,Mary Mountain,P,5
+2011,Mollie's,A,12
+2011,Mollie's,P,7
+2011,Yellowstone Delta,A,8
+2011,Yellowstone Delta,P,5
+2010,Agate,A,4
+2010,Agate,P,4
+2010,Blacktail,A,8
+2010,Blacktail,P,6
+2010,Lamar Canyon,A,3
+2010,Lamar Canyon,P,4
+2010,Quadrant Mountain,A,7
+2010,Other,A,6
+2010,Bechler,A,4
+2010,Bechler,P,7
+2010,Canyon,A,3
+2010,Canyon,P,3
+2010,Cougar Creek,A,4
+2010,Grayling,A,3
+2010,Mary Mountain,A,4
+2010,Mary Mountain,P,2
+2010,Mollie's,A,9
+2010,Mollie's,P,7
+2010,Yellowstone Delta,A,4
+2010,Yellowstone Delta,P,5
+2009,682M group,A,2
+2009,Agate,A,3
+2009,Blacktail,A,5
+2009,Blacktail,P,4
+2009,Druid,A,11
+2009,Everts,A,4
+2009,Lava Creek,A,3
+2009,Quadrant Mountain,A,4
+2009,Quadrant Mountain,P,3
+2009,Other,A,2
+2009,Bechler,A,3
+2009,Bechler,P,3
+2009,Canyon,A,3
+2009,Cougar Creek,A,3
+2009,Cougar Creek,P,3
+2009,Gibbon Meadows,A,11
+2009,Gibbon Meadows,P,6
+2009,Grayling Creek,A,2
+2009,Grayling Creek,P,2
+2009,Mollie's,A,10
+2009,Mollie's,P,5
+2009,Yellowstone Delta,A,2
+2009,Yellowstone Delta,P,2
+2008,Quadrant Mountain,A,4
+2008,Everts,A,5
+2008,Everts,P,3
+2008,Blacktail Deer Plateau,A,8
+2008,Agate,A,4
+2008,Slough,A,7
+2008,Druid,A,8
+2008,Druid,P,5
+2008,Other,A,6
+2008,Mollie's,A,10
+2008,Mollie's,P,3
+2008,Yellowstone Delta,A,7
+2008,Yellowstone Delta,P,2
+2008,YDS,A,4
+2008,Bechler,A,6
+2008,Bechler,P,3
+2008,Cougar Creek,A,4
+2008,Gibbon Meadows,A,19
+2008,Gibbon Meadows,P,6
+2008,Canyon,A,4
+2007,Leopoold,A,13
+2007,Leopoold,P,3
+2007,Oxbow Creek,A,8
+2007,Oxbow Creek,P,8
+2007,Agate,A,8
+2007,Agate,P,9
+2007,Slough,A,7
+2007,Slough,P,9
+2007,Druid,A,9
+2007,Druid,P,7
+2007,Gardner's Hole Group,A,1
+2007,Gardner's Hole Group,P,1
+2007,469F group,A,4
+2007,Other,A,7
+2007,Mollie's,A,9
+2007,Mollie's,P,5
+2007,Yellowstone Delta,A,16
+2007,Yellowstone Delta,P,6
+2007,Bechler,A,8
+2007,Bechler,P,3
+2007,Cougar Creek,A,3
+2007,Cougar Creek,P,4
+2007,Gibbon Meadows,A,11
+2007,Gibbon Meadows,P,6
+2007,Hayden Valley,A,1
+2007,Hayden Valley,P,3
+2006,Swan Lake,A,2
+2006,Swan Lake,P,3
+2006,Leopold,A,7
+2006,Leopold,P,12
+2006,Hellroaring,A,5
+2006,Hellroaring,P,1
+2006,Agate,A,7
+2006,Agate,P,6
+2006,Slough,A,8
+2006,Druid,A,3
+2006,Druid,P,9
+2006,Oxbow Creek,A,4
+2006,Oxbow Creek,P,8
+2006,Mollie's,A,6
+2006,Mollie's,P,5
+2006,Yellowstone Delta,A,11
+2006,Yellowstone Delta,P,5
+2006,Bechler,A,8
+2006,Bechler,P,5
+2006,Cougar Creek,A,4
+2006,Gibbon Meadows,A,8
+2006,Gibbon Meadows,P,4
+2006,Hayden,A,3
+2006,Hayden,P,2
+2005,Swan Lake,A,3
+2005,Leopold,A,12
+2005,Leopold,P,2
+2005,Hellroaring,A,7
+2005,Agate Creek,A,5
+2005,Agate Creek,P,3
+2005,Slough Creek,A,12
+2005,Slough Creek,P,3
+2005,Druid Peak,A,4
+2005,Unknown Group,A,3
+2005,Mollie's,A,7
+2005,Yellowstone Delta,A,12
+2005,Yellowstone Delta,P,5
+2005,Bechler,A,5
+2005,Bechler,P,4
+2005,Nez Perce,A,4
+2005,Cougar Creek I,A,5
+2005,Cougar Creek II,A,8
+2005,Gibbon Meadows,A,6
+2005,Gibbon Meadows,P,3
+2005,Hayden,A,3
+2005,Hayden,P,2
+2004,Agate Creek,A,9
+2004,Agate Creek,P,2
+2004,Bechler,A,2
+2004,Bechler,P,2
+2004,Biscuit Basin,A,5
+2004,Biscuit Basin,P,6
+2004,Chief Joseph,A,7
+2004,Chief Joseph,P,2
+2004,Cougar Creek,A,7
+2004,Cougar Creek,P,5
+2004,Druid Peak,A,7
+2004,Druid Peak,P,2
+2004,Geode Creek,A,7
+2004,Geode Creek,P,5
+2004,Gibbon Meadows,A,6
+2004,Gibbon Meadows,P,2
+2004,Hayden Valley,A,2
+2004,Hayden Valley,P,2
+2004,Leopold,A,12
+2004,Leopold,P,11
+2004,Mollie's,A,4
+2004,Mollie's,P,2
+2004,Nez Perce,A,12
+2004,Nez Perce,P,2
+2004,Slough Creek,A,7
+2004,Slough Creek,P,8
+2004,Specimen Ridge,A,3
+2004,Specimen Ridge,P,2
+2004,Swan Lake,A,7
+2004,Swan Lake,P,2
+2004,Yellowstone Delta,A,15
+2004,Yellowstone Delta,P,4
+2003,Agate Creek,A,4
+2003,Agate Creek,P,6
+2003,Bechler,A,4
+2003,Bechler,P,4
+2003,Chief Joseph,A,5
+2003,Chief Joseph,P,7
+2003,Cougar Creek,A,4
+2003,Cougar Creek,P,6
+2003,Druid Peak,A,9
+2003,Druid Peak,P,8
+2003,Geode Creek,A,2
+2003,Geode Creek,P,5
+2003,Leopold,A,8
+2003,Leopold,P,11
+2003,Mollie's,A,2
+2003,Mollie's,P,5
+2003,Nez Perce,A,2
+2003,Nez Perce,P,13
+2003,Rose Creek II,A,3
+2003,Rose Creek II,P,2
+2003,Slough Creek,A,6
+2003,Slough Creek,P,9
+2003,Swan Lake,A,6
+2003,Swan Lake,P,14
+2003,Yellowstone Delta,A,4
+2003,Yellowstone Delta,P,13
+2002,Agate Creek,A,6
+2002,Agate Creek,P,4
+2002,Bechler,A,2
+2002,Bechler,P,2
+2002,Chief Joseph,A,2
+2002,Chief Joseph,P,8
+2002,Cougar Creek,A,5
+2002,Cougar Creek,P,5
+2002,Druid Peak,A,8
+2002,Druid Peak,P,3
+2002,Geode Creek,A,6
+2002,Geode Creek,P,3
+2002,Leopold,A,8
+2002,Leopold,P,8
+2002,Mollie's,A,10
+2002,Mollie's,P,2
+2002,Nez Perce,A,16
+2002,Nez Perce,P,4
+2002,Rose Creek II,A,7
+2002,Rose Creek II,P,3
+2002,Buffalo Fork Group,A,4
+2002,Swan Lake,A,5
+2002,Swan Lake,P,11
+2002,Tower,A,2
+2002,Yellowstone Delta,A,10
+2002,Yellowstone Delta,P,4
+2001,Druid Peak,A,26
+2001,Druid Peak,P,11
+2001,Rose Creek II,A,4
+2001,Rose Creek II,P,5
+2001,Tower,A,2
+2001,Leopold,A,10
+2001,Leopold,P,4
+2001,Swan Lake,A,6
+2001,Swan Lake,P,2
+2001,Mollie's,A,4
+2001,Mollie's,P,6
+2001,Chief Joseph,A,4
+2001,Chief Joseph,P,7
+2001,Nez Perce,A,18
+2001,Cougar Creek,A,3
+2001,Cougar Creek,P,3
+2001,Yellowstone Delta,A,11
+2001,Yellowstone Delta,P,5
+2001,Other,A,1
+2000,Chief Joseph,A,7
+2000,Chief Joseph,P,6
+2000,Swan Lake,A,2
+2000,Swan Lake,P,5
+2000,Leopold,A,7
+2000,Leopold,P,6
+2000,Rose Creek,A,12
+2000,Rose Creek,P,6
+2000,Druid Peak,A,7
+2000,Druid Peak,P,21
+2000,Mollie's,A,4
+2000,Yellowstone Delta,A,6
+2000,Yellowstone Delta,P,7
+2000,Nez Perce,A,15
+2000,Nez Perce,P,7
+2000,Other,A,2
+1999,Druid Peak,A,6
+1999,Druid Peak,P,2
+1999,Rose Creek,A,10
+1999,Rose Creek,P,6
+1999,Leopold,A,10
+1999,Leopold,P,1
+1999,Crsytal Creek,A,12
+1999,Crsytal Creek,P,1
+1999,Chief Joseph,A,5
+1999,Chief Joseph,P,3
+1999,Nez Perce,A,8
+1999,Nez Perce,P,5
+1999,Soda Butte,A,3
+1999,Soda Butte,P,3
+1999,Sunlight Basin,A,2
+1999,Sunlight Basin,P,7
+1998,Crystal Creek,A,8
+1998,Crystal Creek,P,8
+1998,Leopold,A,8
+1998,Leopold,P,5
+1998,Rose Creek,A,12
+1998,Rose Creek,P,10
+1998,Druid Peak,A,6
+1998,Druid Peak,P,1
+1998,Soda Butte,A,7
+1998,Chief Joseph I,A,6
+1998,Chief Joseph I,P,5
+1998,Nez Perce,A,4
+1998,Nez Perce,P,3
+1998,Sunlight,A,2
+1997,Crystal Creek,A,2
+1997,Crystal Creek,P,6
+1997,Rose Creek,A,6
+1997,Rose Creek,P,9
+1997,Chief Joseph,A,3
+1997,Chief Joseph,P,5
+1997,Druid Peak,A,3
+1997,Druid Peak,P,5
+1997,Leopold,A,4
+1997,Leopold,P,5
+1997,Thorofare,A,2
+1997,Thorofare,P,5
+1997,Soda Butte,A,4
+1997,Soda Butte,P,4
+1997,Nez Perce,A,4
+1997,Nez Perce,P,1
+1997,Other,A,2
+1996,Crystal Creek,A,2
+1996,Rose Creek,A,7
+1996,Rose Creek,P,3
+1996,Soda Butte,A,3
+1996,Soda Butte,P,2
+1996,Chief Joseph,A,2
+1996,Druid Peak,A,5
+1996,Leopold,A,5
+1996,Nez Perce,A,3
+1996,Nez Perce,P,1
+1996,Other,A,6

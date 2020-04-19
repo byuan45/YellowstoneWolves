@@ -66,7 +66,7 @@ function death() {
       .paddingInner(0.3)
       .domain(test[1])
       .range([10, width - 10]);
-    var y = d3.scaleLinear().domain([0, 30]).range([height, 0]);
+    var y = d3.scaleLinear().domain([0, 40]).range([height, 0]);
 
     var x1 = d3.scaleBand().domain(test[2]).range([0, x.bandwidth()]);
 

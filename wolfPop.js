@@ -1,5 +1,5 @@
 function wolfPopulation() {
-  d3.csv("wolfPopulation.csv").then(function (dataset) {
+  d3.csv("wolfPop.csv").then(function (dataset) {
     var year = [
       1996,
       1997,
@@ -44,7 +44,7 @@ function wolfPopulation() {
     function update(input) {
       var margin = { top: 20, right: 160, bottom: 35, left: 30 };
 
-      var width = 1200 - margin.left - margin.right,
+      var width = 1300 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
 
       var svg = d3
@@ -90,10 +90,11 @@ function wolfPopulation() {
 
       //draw rect
       let something = layout(input);
-
+      console.log(something);
       var x = d3
         .scaleBand()
         .domain(something[2])
+        .paddingInner(0.1)
         .range([10, width - 10]);
       var y = d3.scaleLinear().domain([0, 40]).range([height, 0]);
 
