@@ -1,5 +1,6 @@
 function death() {
   d3.csv("Mortality.csv").then(function (dataset) {
+    //build data array
     function layout() {
       let deathArray = [];
       let deathCause = [];
@@ -60,7 +61,7 @@ function death() {
     var width = 1100 - margin.left - margin.right,
       height = 500 - margin.top - margin.bottom;
 
-    // creating x,y, and colors
+    // creating axis, colors, scale, etc
     var x = d3
       .scaleBand()
       .paddingInner(0.3)
@@ -182,7 +183,7 @@ function death() {
       .attr("height", function (d) {
         return height - y(d[0]);
       });
-
+    //build legend
     var legend = svg
       .selectAll(".legend")
       .data(test[2])

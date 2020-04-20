@@ -1,5 +1,6 @@
 function wolfPopulation() {
   d3.csv("wolfPop.csv").then(function (dataset) {
+    //creating the different years that the users will be able to select
     var year = [
       1996,
       1997,
@@ -36,11 +37,12 @@ function wolfPopulation() {
     d3.select("#year").on("change", function () {
       remove(d3.select("#year").property("value"));
     });
-
+    //remove all the data
     function remove(newYear) {
       d3.select("svg").remove();
       update(newYear);
     }
+    //add in new data based on year
     function update(input) {
       var margin = { top: 20, right: 160, bottom: 35, left: 30 };
 
@@ -54,6 +56,7 @@ function wolfPopulation() {
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      // manipulate data into array format
       function layout(year) {
         const result = dataset.filter((dataset) => dataset.Year == year);
         let adultArray = [];
@@ -88,7 +91,7 @@ function wolfPopulation() {
         return totalArray;
       }
 
-      //draw rect
+      //draw axis and scales, also test to see if correct data
       let something = layout(input);
       console.log(something);
       var x = d3
@@ -103,7 +106,7 @@ function wolfPopulation() {
 
       var xAxis = d3.axisBottom().scale(x);
       svg.append("g").attr("class", "y axis").call(yAxis);
-
+      //append rect and text
       svg
         .append("g")
         .attr("class", "x axis")
@@ -156,7 +159,7 @@ function wolfPopulation() {
           return y(d[2]) - y(d[2] + d[1]);
         })
         .attr("width", x.bandwidth() - 10);
-
+      //build legend
       var legend = svg
         .selectAll(".legend")
         .data(colors)
@@ -190,9 +193,8 @@ function wolfPopulation() {
               return "Adults";
           }
         });
-
-      //draw tooltip
     }
+    //have 1996 show up since it's the first year
     update(1996);
   });
 }
